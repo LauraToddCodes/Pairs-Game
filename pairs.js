@@ -221,16 +221,16 @@ function screenResponse(x) {
             array.sort(() => Math.random() - 0.5);
         }
         
-        let pair1 = "http://www.lauratodddesign.com/codepen/pairs/book.svg"
-        let pair2 = "http://www.lauratodddesign.com/codepen/pairs/globe.svg"
-        let pair3 = "http://www.lauratodddesign.com/codepen/pairs/mortarboard.svg"
-        let pair4 = "http://www.lauratodddesign.com/codepen/pairs/pen.svg"
-        let pair5 = "http://www.lauratodddesign.com/codepen/pairs/pencil.svg"
-        let pair6 = "http://www.lauratodddesign.com/codepen/pairs/physics.svg"
-        let pair7 = "http://www.lauratodddesign.com/codepen/pairs/schoolBag.svg"
-        let pair8 = "http://www.lauratodddesign.com/codepen/pairs/schoolBell.svg"
-        let pair9 = "http://www.lauratodddesign.com/codepen/pairs/scissors.svg"
-        let pair10 = "http://www.lauratodddesign.com/codepen/pairs/testTubes.svg"
+        let pair1 = "./images/book.svg"
+        let pair2 = "./images/globe.svg"
+        let pair3 = "./images/mortarboard.svg"
+        let pair4 = "./images/pen.svg"
+        let pair5 = "./images/pencil.svg"
+        let pair6 = "./images/physics.svg"
+        let pair7 = "./images/schoolBag.svg"
+        let pair8 = "./images/schoolBell.svg"
+        let pair9 = "./images/scissors.svg"
+        let pair10 = "./images/testTubes.svg"
         let arr = [pair1, pair1, pair2, pair2, pair3, pair3, pair4, pair4, pair5, pair5, pair6, pair6, pair7, pair7, pair8, pair8, pair9, pair9, pair10, pair10];
         shuffle(arr);
         
