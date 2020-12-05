@@ -11,16 +11,16 @@ function screenResponse(x) {
             array.sort(() => Math.random() - 0.5);
         }
 
-        let pair1 = "./images/book.svg"
-        let pair2 = "./images/globe.svg"
-        let pair3 = "./images/mortarboard.svg"
-        let pair4 = "./images/pen.svg"
-        let pair5 = "./images/pencil.svg"
-        let pair6 = "./images/physics.svg"
-        let pair7 = "./images/schoolBag.svg"
-        let pair8 = "./images/schoolBell.svg"
-        let pair9 = "./images/scissors.svg"
-        let pair10 = "./images/testTubes.svg"
+        let pair1 = "https://lauratoddcode.github.io/Pairs-Game/images/book.svg"
+        let pair2 = "https://lauratoddcode.github.io/Pairs-Game/images/globe.svg"
+        let pair3 = "https://lauratoddcode.github.io/Pairs-Game/images/mortarboard.svg"
+        let pair4 = "https://lauratoddcode.github.io/Pairs-Game/images/pen.svg"
+        let pair5 = "https://lauratoddcode.github.io/Pairs-Game/images/pencil.svg"
+        let pair6 = "https://lauratoddcode.github.io/Pairs-Game/images/physics.svg"
+        let pair7 = "https://lauratoddcode.github.io/Pairs-Game/images/schoolBag.svg"
+        let pair8 = "https://lauratoddcode.github.io/Pairs-Game/images/schoolBell.svg"
+        let pair9 = "https://lauratoddcode.github.io/Pairs-Game/images/scissors.svg"
+        let pair10 = "https://lauratoddcode.github.io/Pairs-Game/images/testTubes.svg"
         let arr = [pair1, pair1, pair2, pair2, pair3, pair3, pair4, pair4, pair5, pair5, pair6, pair6, pair7, pair7, pair8, pair8, pair9, pair9, pair10, pair10];
         shuffle(arr);
         
@@ -221,16 +221,16 @@ function screenResponse(x) {
             array.sort(() => Math.random() - 0.5);
         }
         
-        let pair1 = "./images/book.svg"
-        let pair2 = "./images/globe.svg"
-        let pair3 = "./images/mortarboard.svg"
-        let pair4 = "./images/pen.svg"
-        let pair5 = "./images/pencil.svg"
-        let pair6 = "./images/physics.svg"
-        let pair7 = "./images/schoolBag.svg"
-        let pair8 = "./images/schoolBell.svg"
-        let pair9 = "./images/scissors.svg"
-        let pair10 = "./images/testTubes.svg"
+        let pair1 = "https://lauratoddcode.github.io/Pairs-Game/images/book.svg"
+        let pair2 = "https://lauratoddcode.github.io/Pairs-Game/images/globe.svg"
+        let pair3 = "https://lauratoddcode.github.io/Pairs-Game/images/mortarboard.svg"
+        let pair4 = "https://lauratoddcode.github.io/Pairs-Game/images/pen.svg"
+        let pair5 = "https://lauratoddcode.github.io/Pairs-Game/images/pencil.svg"
+        let pair6 = "https://lauratoddcode.github.io/Pairs-Game/images/physics.svg"
+        let pair7 = "https://lauratoddcode.github.io/Pairs-Game/images/schoolBag.svg"
+        let pair8 = "https://lauratoddcode.github.io/Pairs-Game/images/schoolBell.svg"
+        let pair9 = "https://lauratoddcode.github.io/Pairs-Game/images/scissors.svg"
+        let pair10 = "https://lauratoddcode.github.io/Pairs-Game/images/testTubes.svg"
         let arr = [pair1, pair1, pair2, pair2, pair3, pair3, pair4, pair4, pair5, pair5, pair6, pair6, pair7, pair7, pair8, pair8, pair9, pair9, pair10, pair10];
         shuffle(arr);
         
