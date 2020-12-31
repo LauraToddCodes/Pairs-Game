@@ -202,6 +202,7 @@ function screenResponse(x) {
                 "opacity": "0",
                 "pointer-events": "none"
             })
+            time = 0
             shuffle(arr);
             assignCards();
             let gameComplete = 0;
@@ -412,6 +413,7 @@ function screenResponse(x) {
                 "opacity": "0",
                 "pointer-events": "none"
             })
+            time = 0
             shuffle(arr);
             assignCards();
             let gameComplete = 0;

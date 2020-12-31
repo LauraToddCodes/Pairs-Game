@@ -24,15 +24,6 @@ html, body {
 	font-size: 1.15em;
 	font-family: 'Work Sans', sans-serif;
 }
-
-
-#rpsWrapper {
-	display: grid;
-	grid-template-columns: 30px 1fr 1fr 1fr 30px;
-	grid-template-rows: 5px 1fr 5px;
-	grid-gap: 10px;
-	height: 100%;
-}
   
 #rpstitle {
 	text-align: center;
@@ -97,13 +88,17 @@ html, body {
 	z-index: 0;
 	display: grid;
 	grid-template-columns: 1em 1fr 1fr 1em;
-	grid-template-rows: 4fr;
+	grid-template-rows: auto;
 	background-color: #A8D9F8;
 	grid-column: 1 / 6;
 	grid-row: 2 / 3;
 	color: black;
 	border-radius: 1em;
-	margin: 0 20px 20px 20px;
+	margin: 10px 10px 10px 10px;	
+	min-height: calc(100vh - 20px);
+	min-height: -o-calc(100vh - 20px); 
+	min-height: -webkit-calc(100vh - 20px); 
+	min-height: -moz-calc(100vh - 20px);
 }
 
 .pairsMain {
@@ -206,10 +201,6 @@ html, body {
 }
 
 @media only screen and (min-width: 34em) and (max-width: 65em) {
-	
-	#rpsWrapper {
-		grid-template-rows: 1fr 1fr 1fr 6.5em;
-	}
 
 	.pairsMain {
 		margin: 5px 0;
@@ -254,9 +245,7 @@ html, body {
 	}
 
 	#pairsMainGame {
-		margin: 0 10px 10px 10px;
 		grid-template-columns: 0.5em 1fr 1fr 0.5em;
-		grid-row: 2 / 3;
 	}
 
 	.pairsMain {
