@@ -53,17 +53,19 @@ function startTimer(){
 }
 
 // if the timer is not started, start timer
-$(".back, .front").on("click", function(){
+[...document.querySelectorAll(".back, .front")].forEach(item => 
+    item.addEventListener("click", function() {
     if(timer == null){
         timer = setInterval(startTimer, 1000);
     }
-})
+}));
 
 
 
 let bestTimeInt = 100000000;
 
-$(".back, .front").on("click", function () {
+[...document.querySelectorAll(".back, .front")].forEach(item => 
+    item.addEventListener("click", function() {
 
     let foundAllPairs = document.querySelectorAll(".pairMatched").length;
     // if player has found all but last pair
@@ -73,7 +75,8 @@ $(".back, .front").on("click", function () {
         this.classList.add("gameComplete");
         let gameComplete = document.querySelectorAll(".gameComplete").length;
     
-        $(".back, .front").on("click", function(){
+        [...document.querySelectorAll(".back, .front")].forEach(item => 
+            item.addEventListener("click", function() {
             // the next card they flip will stop the timer
             if(gameComplete == 1){
             clearInterval(timer);
@@ -116,9 +119,9 @@ $(".back, .front").on("click", function () {
                 next();  
             });
             }
-        });
+        }));
     }
-});
+}));
 
 
 [...document.querySelectorAll(".back, .front")].forEach(item => 
@@ -145,9 +148,6 @@ $(".back, .front").on("click", function () {
         this.nextElementSibling.id = "selectedCard2";
         this.nextElementSibling.classList.add("selectedCard");
         
-        document.querySelectorAll("div.card:not(.flipcard)").classList.add("notSelected");
-        //$(".card:not(.selectedCard)").addClass("notSelected");
-        
         const selectedCard1 = document.getElementById("selectedCard1");
         const selectedCard2 = document.getElementById("selectedCard2");
 
@@ -161,9 +161,7 @@ $(".back, .front").on("click", function () {
             selectedCard1.removeAttribute("id")
             selectedCard1.classList.remove("selectedCard");
             selectedCard2.removeAttribute("id")
-            selectedCard2.classList.remove("selectedCard");
-            //document.getElementsByClassName("notSelected").classList.remove("notSelected");
-        
+            selectedCard2.classList.remove("selectedCard");        
         }
         else {
             // to stop player selecting a new card before this has played out
@@ -174,7 +172,6 @@ $(".back, .front").on("click", function () {
             selectedCard2.parentNode.classList.remove("flipCard");
             selectedCard1.removeAttribute("id");
             selectedCard2.removeAttribute("id");
-            //document.getElementsByClassName("notSelected").classList.remove("notSelected");
             }, 1500);
         }
         
@@ -200,15 +197,28 @@ $(".back, .front").on("click", function () {
 
 // reset button
 
-$("#resetBtn").on("click", function(){
-    $(".card").removeClass("flipCard").removeClass("pairMatched").removeClass("returnCard");
-    $(".back").removeClass("gameComplete");
-    $(".front").removeClass("selectedCard");
-    $("#highScore").css({"font-size": "0.25em"}).text("");
-    $("div#pairsModal").css({
-        "opacity": "0",
-        "pointer-events": "none"
-    })
+document.getElementById("resetBtn").addEventListener("click", function(){
+    console.log("clicks")
+    const card = document.querySelectorAll(".card");
+    const back = document.getElementsByClassName("back");
+    const front = document.getElementsByClassName("front");
+    const highScore = document.getElementById("highScore");
+    const modal = document.getElementById("pairsModal");
+    for (let i = 0; i < card.length; i++) {
+        card[i].classList.remove("flipCard");
+        card[i].classList.remove("pairMatched");
+        card[i].classList.remove("returnCard");
+    }
+    for (let j = 0; j < back.length; j++) {
+        back[j].classList.remove("gameComplete");
+    }
+    for (let k = 0; k < front.length; k++) {
+        front[k].classList.remove("selectedCard");
+    }
+    highScore.style.fontSize = "0.25em";
+    highScore.innerHTML = "";
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
     time = 0
     shuffle(arr);
     assignCards();

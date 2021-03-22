@@ -143,6 +143,7 @@ html, body {
 	height: 125px;
 	width: 100px;
 	justify-self: center;
+	cursor: pointer;
 }
 
 .front {
