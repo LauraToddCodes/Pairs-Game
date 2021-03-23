@@ -200,8 +200,18 @@ html, body {
 	font-size: 2em;
 }
 
-#highScore {
-	font-size: 0.25em;
+.highScoreAnimate {
+	animation: textResize 2.5s linear;
+	animation-fill-mode: forwards;
+}
+
+@keyframes textResize {
+	from {
+		font-size: 0.25em;
+	}
+	to {
+		font-size: 4em;
+	}
 }
 
 @media only screen and (min-width: 34em) and (max-width: 65em) {

@@ -79,45 +79,38 @@ let bestTimeInt = 100000000;
             item.addEventListener("click", function() {
             // the next card they flip will stop the timer
             if(gameComplete == 1){
-            clearInterval(timer);
-            
-            
-            // high score
-            let currentTime = timerElement.innerHTML;
-            let currentTimeInt = parseInt(currentTime);
-            console.log(`The current time is ${currentTimeInt}`)
-            
-            let bestTime = document.getElementById("bestTime").innerHTML;
-            let bestTimeInt = parseInt(bestTime);
-            console.log(`The best time is ${bestTimeInt}`)
-            
-            document.getElementById("pairsResult").innerHTML = `Your time was ${currentTimeInt} seconds`;
-            
-            if(currentTimeInt < bestTimeInt || bestTimeInt == 0){
-                document.getElementById("bestTime").innerHTML = currentTime;
-            }
-            
-            if(currentTimeInt < bestTimeInt && bestTimeInt != 0){
-                $("#highScore").html("<span>You beat your </br> best time!</span>");
-                $("#highScore").animate({
-                "font-size": "4em"
-                }, 2500)
-            }
-            
-            $("div#pairsModal")
-            .delay(1000)
-            .queue(function (next) {
-                $(this).css({
-                "opacity": "1",
-                "pointer-events": "auto"
-                });
+                clearInterval(timer);
                 
-                gameComplete = null;
-                timer = null;
-                time = 0;
-                $("#timer").text(time);
-                next();  
-            });
+                // high score
+                let currentTime = timerElement.innerHTML;
+                let currentTimeInt = parseInt(currentTime);
+                console.log(`The current time is ${currentTimeInt}`)
+                
+                let bestTime = document.getElementById("bestTime").innerHTML;
+                let bestTimeInt = parseInt(bestTime);
+                console.log(`The best time is ${bestTimeInt}`)
+                
+                document.getElementById("pairsResult").innerHTML = `Your time was ${currentTimeInt} seconds`;
+                
+                if(currentTimeInt < bestTimeInt || bestTimeInt == 0){
+                    document.getElementById("bestTime").innerHTML = currentTime;
+                }
+                
+                if(currentTimeInt < bestTimeInt && bestTimeInt != 0){
+                    const highScore = document.getElementById("highScore");
+                    highScore.innerHTML = "<span>You beat your </br> best time!</span>";
+                    highScore.classList.add("highScoreAnimate");
+                }
+                
+                setTimeout(function(){
+                    const modal = document.getElementById("pairsModal");
+                    modal.style.opacity = "1";
+                    modal.style.pointerEvents = "auto";
+                    gameComplete = null;
+                    timer = null;
+                    time = 0;
+                    document.getElementById("timer").innerHTML = time;
+                }, 1000)
             }
         }));
     }
