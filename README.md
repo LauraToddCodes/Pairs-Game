@@ -1,5 +1,5 @@
 # Pairs Game
- A game of pairs using CSS, Javascript and jQuery.
+ A game of pairs using Javascript.
 
  I've kept the styling simple as the main thing users need to see is the images so that they can easily match them.
 
