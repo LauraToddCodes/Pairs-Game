@@ -4,16 +4,16 @@ function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
 }
 
-let pair1 = "https://lauratoddcode.github.io/Pairs-Game/images/book.svg";
-let pair2 = "https://lauratoddcode.github.io/Pairs-Game/images/globe.svg";
-let pair3 = "https://lauratoddcode.github.io/Pairs-Game/images/mortarboard.svg";
-let pair4 = "https://lauratoddcode.github.io/Pairs-Game/images/pen.svg";
-let pair5 = "https://lauratoddcode.github.io/Pairs-Game/images/pencil.svg";
-let pair6 = "https://lauratoddcode.github.io/Pairs-Game/images/physics.svg";
-let pair7 = "https://lauratoddcode.github.io/Pairs-Game/images/schoolBag.svg";
-let pair8 = "https://lauratoddcode.github.io/Pairs-Game/images/schoolBell.svg";
-let pair9 = "https://lauratoddcode.github.io/Pairs-Game/images/scissors.svg";
-let pair10 = "https://lauratoddcode.github.io/Pairs-Game/images/testTubes.svg";
+let pair1 = "https://lauratoddcodes.github.io/Pairs-Game/images/book.svg";
+let pair2 = "https://lauratoddcodes.github.io/Pairs-Game/images/globe.svg";
+let pair3 = "https://lauratoddcodes.github.io/Pairs-Game/images/mortarboard.svg";
+let pair4 = "https://lauratoddcodes.github.io/Pairs-Game/images/pen.svg";
+let pair5 = "https://lauratoddcodes.github.io/Pairs-Game/images/pencil.svg";
+let pair6 = "https://lauratoddcodes.github.io/Pairs-Game/images/physics.svg";
+let pair7 = "https://lauratoddcodes.github.io/Pairs-Game/images/schoolBag.svg";
+let pair8 = "https://lauratoddcodes.github.io/Pairs-Game/images/schoolBell.svg";
+let pair9 = "https://lauratoddcodes.github.io/Pairs-Game/images/scissors.svg";
+let pair10 = "https://lauratoddcodes.github.io/Pairs-Game/images/testTubes.svg";
 let arr = [pair1, pair1, pair2, pair2, pair3, pair3, pair4, pair4, pair5, pair5, pair6, pair6, pair7, pair7, pair8, pair8, pair9, pair9, pair10, pair10];
 shuffle(arr);
 
@@ -69,7 +69,7 @@ let bestTimeInt = 100000000;
 
     let foundAllPairs = document.querySelectorAll(".pairMatched").length;
     // if player has found all but last pair
-    // foundAlPairs should be 18
+    // foundAllPairs should be 18
     if (time > 0 && foundAllPairs == 18) {
         // the next card they flip will have gameComplete class added to it
         this.classList.add("gameComplete");
